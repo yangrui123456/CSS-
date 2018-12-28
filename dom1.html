@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function confirmDel(e){
+		var isConfirm = window.confirm("确认删除吗");
+		if (!isConfirm) {
+			//阻止href事件 event在火狐和ie是不一样的
+			if (e&&e.preventDefault) {
+				e.preventDefault();
+			}else{
+			//ie
+			window.event.returnValue = false;
+		}	
+		}
+		}
+		function clickA(e) {
+			alert("a");
+			if(e && e.stopPropagation){
+				e.stopPropagation()
+			}else{
+				window.event.cancelBubble = true;
+			}
+		}
+
+	</script>
+	<a href="del" onclick="confirmDel(event);">删除</a>
+	<div onclick="divB"><a onclick="clickA(event);"  href="#">link</a></div>
+</body>
+</html>

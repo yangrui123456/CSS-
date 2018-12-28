@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+		}
+		.top,
+		.footer{
+			height: 100px;
+			background-color: rgba(0,0,0,0.3);
+			margin: 0 auto;
+		}
+		.top-inner{
+			height: 100px;
+			width: 800px;
+			background-color: #ccc;
+			margin: 0 auto;
+		}
+		.banner {
+			height: 100px;
+			width: 800px;
+			background-color: purple;
+			margin: 0 auto;		}
+		.banner li{
+			width: 192.5px;
+			height: 100px;
+			background-color: pink;
+			margin: 0 auto;	
+			float: left;
+
+			margin-right: 10px;
+		}
+		.banner li.four{ /*优先级 权重比上面那个重 10+1+10*/
+			margin-right: 0;
+		}
+		.main{
+			height: 100px;
+			width: 800px;
+			background-color: yellow;
+			margin: 0 auto;
+		}
+		.left{
+			height: 100px;
+			width: 300px;
+			background-color: #eee;
+			float: left;
+			
+		}
+		.right{
+			height: 100px;
+			width: 300px;
+			background-color: #eee;
+			float: right;
+			
+		}
+		.footer-inner{
+			height: 100px;
+			width: 800px;
+			background-color: #ccc;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="top-inner">123</div>
+	</div>
+	<div class="banner">
+		<ul>
+			<li class="one">1</li>
+			<li class="two">2</li>
+			<li>3</li>
+			<li class="four">4</li>
+		</ul>
+	</div>
+	<div class="main">
+		<div class="left">left</div>
+		<div class="right">right</div>
+	</div>
+	<div class="footer">
+		<div class="footer-inner">123</div>
+	</div>
+</body>
+</html>

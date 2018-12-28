@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://mockjs.com/dist/mock.js"></script>
+</head>
+<body>
+	<script>
+    
+//调用mock方法模拟数据
+Mock.mock('http://laoyu', {
+  "errorcode": 0,//0表示成功，1表示错误
+  "message": "xx信息不完整", //弹出错误信息
+});
+    
+//使用ajax进行测试
+var xhr = new XMLHttpRequest();
+xhr.open("post","http://laoyu",true);
+xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xhr.send(null);
+xhr.onreadystatechange = function(){
+	if(xhr.readyState == 4){
+		if((xhr.status>=200 && xhr.status<300) || xhr.status== 304){
+			var data = JSON.parse(xhr.responseText);	//因为reponseText返回的是字符串，将字符串转换成我们想要的 JSON 数据，这样就可以调用了
+			
+			console.log(data);  //在控制台中打印出返回的内容
+		}else{
+			alert("Request was unsuccessful: " + xhr.status);
+		}
+	}
+}
+</script>
+</body>
+</html>

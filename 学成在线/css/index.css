@@ -1,0 +1,346 @@
+body{
+	background-color: #f3f5f7;
+}
+header{
+	width: 1200px;
+	height: 100px;
+	/*background-color: pink;*/
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.logo{
+	width: 195px;
+	height: 42px;
+	/*background-color: yellow;*/
+	float: left;
+			
+}
+.logo a{
+	display: block;	
+	width: 195px;
+	height: 42px;
+	background:url(../images/logo.png) no-repeat;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+nav{
+	float: left;
+	margin-left: 10px;
+}
+nav li{
+	float: left;
+	height: 40px;
+	line-height: 40PX;
+	margin-left: 25px;
+
+}
+nav li a{
+	display: block;
+	font-size: 18px;
+	line-height: 40px;
+	padding:0 10px;
+}
+nav li a:hover{
+	
+	border-bottom: 2px solid #00a4ff;
+}
+.search{
+	width: 410px;
+	height: 40px;
+	background-color: #fff;
+	float: left;
+	margin-left: 70px;
+}
+.search input{
+	width: 361px;
+	height: 40px;
+	border: 1px solid #00a4ff;
+	float: left;
+	outline: none;
+	padding-left: 10px;
+}
+.search button{
+	width: 49px;
+	height: 40px;
+	float: left;
+	outline: none;
+	border: 0;
+	background: url(../images/fa-search.png) no-repeat;
+}
+.personal{
+	float: right;
+	height: 40px;
+	line-height: 40px;
+}
+.personal dt, .personal dd{
+	float: left;
+}
+.personal s{
+	position: relative;
+	padding: 0 25px;
+}
+.personal s::before{
+	content: "";
+	display: block;/*因为伪元素默认的是行内元素，没有宽高，我们要把它转成块元素给它宽高*/
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: red;
+	right: 16px;
+	top: 0;
+	position: absolute;
+}
+.personal span img{
+	margin-right: 10px;
+	border-radius: 50%;
+	transition: all,0.5s;
+}
+.personal span img:hover{
+	transform: scale(1.2) rotate(90deg);/*多种效果用空格隔开 顺序有关系*/
+	/*transform: rotate(90deg);*//*旋转效果*/
+}
+.banner{
+	height: 420px;
+	background-color: #1c036c;
+}
+.banner-inner{
+	height: 420px;
+	position: relative;
+
+}
+.banner-inner img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.subnav{
+	width: 200px;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	float: left;
+	left: 0;
+	top: 0;
+	position: absolute;
+	padding-top: 10px;
+}
+.subnav li{
+	line-height: 40px;
+	margin-left: 20px;
+
+}
+.subnav li a{
+	font-size: 14px;
+	color: #ccc;
+}
+.subnav li a:hover{
+	color: #0393d9;
+}
+.subnav span{
+	font-size: 14px;
+	float: right;
+	padding-right: 20px;
+}
+.circle{
+	width: 180px;
+	height: 20px;
+	/*background-color: pink;*/
+	position: absolute;
+	left: 50%;
+    bottom: 20px;
+	/*margin-left: -100px;*/
+	transform: translate(-50%);/*本身盒子的一半*/
+}
+.circle i{
+	display: inline-block;/*在一行内显示*/
+	width: 13px;
+	height: 13px;
+	border-radius: 6px;
+	background:rgba(255,255,255,0.4);
+	margin: 0 6px;
+	transition: all 0.2s;
+	cursor: pointer;
+}
+.circle i:hover{
+	width: 20px;
+	background-color: #fff;
+
+}
+.course {
+	width: 228px;
+	height: 300px;
+	background-color: #fff;
+	position:absolute;
+	right: 0;
+	top: 50%;
+	/*transform: translate(0,-50%);*/
+	transform: translateY(-50%);/*Y轴在变化*/
+}
+.course dt{
+	height: 50px;
+	background-color: #9bceea;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+}
+.course dd {
+	padding: 15px 20px 0;
+}
+.course dd li{
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	/*background-color: yellow;*/
+	padding-top: 10px;
+}
+.course li:last-child{
+	border:0;
+}
+.course h5{
+	font-size: 16px;
+	font-weight: normal;
+}
+.course li p{
+	font-size: 12px;
+	color: #bfbfbf;
+}
+.course li :hover{
+	color: #22b0ff;
+}
+.all{
+	display: block;
+	height: 40px;
+	border: 1px solid #22b0ff;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+	color: #22b0ff;
+
+}
+.all:hover{
+	background-color: #22b0ff;
+	color: #fff;
+}
+.recommend {
+	margin-top: 10px;
+	height: 60px;
+	background-color: #fff;
+	line-height: 60px;
+	position: relative;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+.rec-l {
+	padding-left: 30px;
+}
+.rec-l  a{
+	font-size: 14px;
+	margin: 0 15px;
+}
+.rec-l strong{
+	font-weight: 700;
+	color:  #22b0ff;
+	margin-right: 20px;
+}
+.recommend em{
+	position: absolute;
+	right: 30px;
+	bottom: 0;
+}
+.products{
+	margin-top: 20px;
+	
+}
+.pro-hd{
+	height: 40px;
+	position: relative;
+}
+.pro-hd h4{
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.pro-hd a {
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+.pro-bd li{
+	width: 188px;
+	height: 250px;
+	background-color: #fff;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.pro-bd li:hover{
+	box-shadow: 2px 2px 10px rgba(0,0,0,.4);
+	transform: translateY(-5px);
+}
+.pro-bd li:nth-child(5n){
+	margin-right: 0;
+}
+.pro-bd img{
+	width: 105%;
+}
+.pro-bd img:hover{
+	margin-left: -5px;
+	transition: all,0.4s;
+}
+.pro-title{
+	width: 155px;
+	/*background-color: yellow;*/
+	margin: 20px auto;
+	font-size: 14px;
+}
+.pro-bd p{
+	width: 155px;
+	margin:20px auto;
+}
+.pro-bd p span{
+	color: #ff7c2d;
+}
+footer{
+	height: 420px;
+	background-color: #fff;
+	margin-top: 40px;
+	padding-top: 30px;
+}
+.footer-l {
+	margin-left: 20px;
+	float: left;
+}
+.footer-l p{
+	margin:25px 0 15px 0;
+}
+.footer-l a{
+	width: 120px;
+	height: 35px;
+	border:1px solid #00a4ff;
+	text-align: center;
+	line-height: 35px;
+	display: block;
+	color: #00a4ff;
+}
+.footer-l a:hover{
+	color: #fff;
+	background-color: #00a4ff;
+}
+.footer-r {
+	float: right;
+}
+.footer-r dl{
+	float: left;
+	margin-left: 110px;
+	top: 0;
+	left: 0;
+}
+.footer-r dl dt{
+	font-size: 14px;
+	height: 30px;
+}
+.footer-r dl dd{
+	height: 20px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+	<style type="text/css">
+		#result{
+			display: none;
+		}
+		h2{
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		.operate button{
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="title col-6 ofset-3">注册</h2>
+	<form id="myForm" class="col-6 ofset-3">
+		<div class = "form-group row">
+			<lable class="col-2 col-form-lable">姓名</lable>
+			<div class="col-10">
+			<input class="form-control" name="name" type="text" >
+			</div>
+		</div>
+		<div class = "form-group row">
+			<lable class="col-2 col-form-lable">密码</lable>
+			<div class="col-10">
+			<input class="form-control" name="password" type="password">
+			</div>
+		</div>
+		<div class = "form-group row">
+			<lable class="col-2 col-form-lable">电话</lable>
+			<div class="col-10">
+			<input class="form-control" name="cellphone" type="text">
+			</div>
+		</div>
+		<div class = "form-group row">
+			<lable class="col-2 col-form-lable">地址</lable>
+			<div class="col-10">
+			<input class="form-control" name="address" type="text">
+			</div>
+		</div>
+		<div id="result" class="alert alert-danger">
+
+		</div>
+		<div class="operate form-group row">
+			<button class="btn btn-primary" type="submit">提交</button>
+		</div>
+	</form>
+	<script>
+		var form = document.querySelector('#myForm');
+		var result = document.querySelector('#result');
+		form.addEventListener('submit',function (e) {
+			// body...
+			if(!document.querySelector('[name=password]').value){
+				result.style.display = 'block';
+				result.innerHtml = '密码不能为空';
+			}else{
+				result.style.display = 'none';
+			}
+			e.preventDefault();
+		});
+	</script>
+</body>
+</html>

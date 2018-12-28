@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.clock{
+			width: 60px;
+			height: 30px;
+			background: #00f;
+			border-radius: 20px;
+			color: #fff;
+			border-radius: 20px;
+			line-height: 30px;
+			font-size: 12px;
+			text-align: center;
+			margin-top:  20px;
+		}
+		.unclock{
+			width: 60px;
+			height: 30px;
+			background: yellow;
+			border-radius: 20px;
+			color: #ccc;
+			border-radius: 20px;
+			line-height: 30px;
+			font-size: 12px;
+			text-align: center;
+			margin-top: 20px;
+		}
+		.text span{
+			font-weight: bold;
+			color: #f00;
+		}
+		em{
+			font-style: normal;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="btn" class="clock">锁定</div>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		btn.onclick = function(){
+			/*if(this.className == "clock"){
+				this.className = "unclock";
+				this.innerHTML = "解锁";
+			}else{
+				this.className = "clock";
+				this.innerHTML = "锁定";
+
+			}*/
+			//inner HTML 既有获取又有设置的功能
+			if (this.innerHTML=="锁定") {
+				this.className = "unclock";
+				this.innerHTML = "解锁";
+			}else{
+				this.className = "clock";
+				this.innerHTML = "锁定";
+			}
+		}
+	</script>
+	<div>
+	<p class="text">您还可以输入<span><em id="count">30</em></span>/30个字</p>
+	<div class="input">
+		<textarea id="text" ="" cols="70" rows="4" ></textarea>
+	</div>
+	</div>
+	<script type="text/javascript">
+	/*获取文本框*/
+	var text = document.getElementById('text');
+	var total = 30;
+	var num = document.getElementById("count");
+	/*绑定键盘事件*/
+	document.onkeyup=function(){
+		//获取文本框的值得长度
+		var len = text.value.length;
+		var allow = total -len;
+		num.innerHTML = allow;
+	}
+	</script>
+	<input type="text" list="abcd" >
+	<datalist id="abcd">
+		<option value="56547741">你是一头猪</option>
+		<option value="1889776">我是一个好人</option>
+		<option value="12345">从前有座山</option>
+	</datalist>
+</body>
+
+</html>
